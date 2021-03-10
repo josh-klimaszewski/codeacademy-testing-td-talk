@@ -1,3 +1,20 @@
+# Sample project for https://community.codecademy.com/events/details/codecademy-detroit-presents-unit-tests-101/#/
+
+If you'd like to follow along, please make sure you have node downloaded:
+https://nodejs.org/en/download/
+
+Optional: yarn (i'll be using this instead of npm)
+https://classic.yarnpkg.com/en/docs/install/#windows-stable
+
+Also make sure to download Visual Studio Code if you can as that's the IDE I'll be using - any should work, however!
+https://code.visualstudio.com/
+
+Covered Topics:
+
+- TDD / Jest
+- Typescript
+- state machine, useState, useReducer
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
