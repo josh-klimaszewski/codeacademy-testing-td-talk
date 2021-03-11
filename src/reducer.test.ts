@@ -4,10 +4,26 @@ import {
   deleteSecondItemAction,
   editFirstItemAction,
   stateWithOneItem,
+  stateWithThreeItems,
   stateWithTwoItems,
   updatedStateWithTwoItems,
 } from "./mocks";
-import { initialState, reducer } from "./reducer";
+import { findNextId, initialState, reducer } from "./reducer";
+
+describe("findNextId", () => {
+  it("returns 1 on empty state", () => {
+    expect(findNextId(initialState.todos)).toBe(1);
+  });
+  it("returns 2 on state with one item", () => {
+    expect(findNextId(stateWithOneItem.todos)).toBe(2);
+  });
+  it("returns 3 on state with two items", () => {
+    expect(findNextId(stateWithTwoItems.todos)).toBe(3);
+  });
+  it("returns 4 on state with three items", () => {
+    expect(findNextId(stateWithThreeItems.todos)).toBe(4);
+  });
+});
 
 describe("reducer", () => {
   it("returns initial state", () => {

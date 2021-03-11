@@ -4,6 +4,7 @@ enum Dictionary {
   TEST_DESCRIPTION = "test description 1",
   UPDATED_TEST_DESCRIPTION = "updated test description 1",
   TEST_DESCRIPTION_2 = "test description 2",
+  TEST_DESCRIPTION_3 = "test description 3",
 }
 
 export const testItemOne: Item = {
@@ -21,6 +22,11 @@ export const testItemTwo: Item = {
   description: Dictionary.TEST_DESCRIPTION_2,
 };
 
+export const testItemThree: Item = {
+  id: 3,
+  description: Dictionary.TEST_DESCRIPTION_3,
+};
+
 export const stateWithOneItem: State = {
   todos: [testItemOne],
 };
@@ -31,6 +37,10 @@ export const stateWithTwoItems: State = {
 
 export const updatedStateWithTwoItems: State = {
   todos: [updatedTestItemOne, testItemTwo],
+};
+
+export const stateWithThreeItems: State = {
+  todos: [testItemOne, testItemTwo, testItemThree],
 };
 
 export const addFirstTestItemAction: Action = {
