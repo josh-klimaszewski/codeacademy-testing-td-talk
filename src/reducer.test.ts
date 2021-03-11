@@ -1,32 +1,9 @@
+import {
+  stateWithOneItem,
+  stateWithTwoItems,
+  updatedStateWithTwoItems,
+} from "./mocks";
 import { initialState, reducer } from "./reducer";
-import { State } from "./types";
-
-const testItemOne = {
-  id: 1,
-  description: "test description 1",
-};
-
-const updatedTestItemOne = {
-  id: 1,
-  description: "updated test description 1",
-};
-
-const testItemTwo = {
-  id: 2,
-  description: "test description 2",
-};
-
-const stateWithOneItem: State = {
-  todos: [testItemOne],
-};
-
-const stateWithTwoItems: State = {
-  todos: [testItemOne, testItemTwo],
-};
-
-const updatedStateWithTwoItems: State = {
-  todos: [updatedTestItemOne, testItemTwo],
-};
 
 describe("reducer", () => {
   it("returns initial state", () => {
