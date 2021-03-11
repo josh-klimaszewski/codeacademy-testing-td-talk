@@ -1,18 +1,24 @@
-import { Item, State } from "./types";
+import { Action, Item, State } from "./types";
+
+enum Dictionary {
+  TEST_DESCRIPTION = "test description 1",
+  UPDATED_TEST_DESCRIPTION = "updated test description 1",
+  TEST_DESCRIPTION_2 = "test description 2",
+}
 
 export const testItemOne: Item = {
   id: 1,
-  description: "test description 1",
+  description: Dictionary.TEST_DESCRIPTION,
 };
 
 export const updatedTestItemOne: Item = {
-  id: 1,
-  description: "updated test description 1",
+  ...testItemOne,
+  description: Dictionary.UPDATED_TEST_DESCRIPTION,
 };
 
 export const testItemTwo: Item = {
   id: 2,
-  description: "test description 2",
+  description: Dictionary.TEST_DESCRIPTION_2,
 };
 
 export const stateWithOneItem: State = {
@@ -25,4 +31,24 @@ export const stateWithTwoItems: State = {
 
 export const updatedStateWithTwoItems: State = {
   todos: [updatedTestItemOne, testItemTwo],
+};
+
+export const addFirstTestItemAction: Action = {
+  type: "add",
+  data: Dictionary.TEST_DESCRIPTION,
+};
+
+export const addSecondItemAction: Action = {
+  type: "add",
+  data: Dictionary.TEST_DESCRIPTION_2,
+};
+
+export const editFirstItemAction: Action = {
+  type: "edit",
+  data: updatedTestItemOne,
+};
+
+export const deleteSecondItemAction: Action = {
+  type: "delete",
+  data: testItemTwo.id,
 };

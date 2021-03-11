@@ -9,7 +9,7 @@ export const findNextId = (todos: Item[]): number => {
     return 1;
   } else {
     const allIds = todos.map((t) => t.id);
-    return Math.min(...allIds) + 1;
+    return Math.max(...allIds) + 1;
   }
 };
 
